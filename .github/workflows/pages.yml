@@ -1,3 +1,5 @@
+# Requires: Settings → Pages → Build and deployment → Source = "GitHub Actions"
+# (one-time repo setting; done as of 2026-09-01).
 name: Deploy site to GitHub Pages
 
 on:
