@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="stylesheet" href="_ds/industry-96ba1d8f-1725-4393-8304-d9b96166de96/styles.css">
+<script src="_ds/industry-96ba1d8f-1725-4393-8304-d9b96166de96/_ds_bundle.js"></script>
+<script src="./image-slot.js"></script>
+<style>
+:root{
+  --color-accent:#1B4FD1;
+  --color-accent-100:#EEF3FF;
+  --color-accent-200:#DCEBFF;
+  --color-accent-300:#B5CDFB;
+  --color-accent-400:#85A8F2;
+  --color-accent-500:#4B79E0;
+  --color-accent-600:#1740AE;
+  --color-accent-700:#163C9E;
+  --color-accent-800:#122C72;
+  --color-accent-900:#0D1E4A;
+  --leading:24px;
+  --edge:clamp(20px,5vw,72px);
+}
+body{margin:0;background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);text-wrap:pretty}
+a{color:var(--color-accent-700);text-underline-offset:3px}
+a:hover{color:var(--color-accent)}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</helmet>
+<div style="background:var(--color-bg);color:var(--color-text);font-family:var(--font-body);min-height:100vh">
+
+  <nav style="position:sticky;top:0;z-index:30;display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px clamp(20px,5vw,72px);background:var(--color-bg);border-bottom:1px solid var(--color-divider)">
+    <span style="display:flex;align-items:center;gap:10px;margin-right:auto">
+      <image-slot id="nc-logo-nav" shape="circle" fit="contain" placeholder="Logo" style="width:48px;height:48px;flex:none"></image-slot>
+    </span>
+    <a href="#modulos" style="color:inherit;text-decoration:none;font-size:14px;white-space:nowrap">Módulos</a>
+    <a href="#detalles" style="color:inherit;text-decoration:none;font-size:14px;white-space:nowrap">Detalles</a>
+    <a href="#inversion" style="color:inherit;text-decoration:none;font-size:14px;white-space:nowrap">Inversión</a>
+    <a href="{{ ctaHref }}" onClick="{{ ctaClick }}" role="button" style="display:inline-flex;align-items:center;justify-content:center;padding:9px 18px;border:1px solid var(--color-accent);background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:600;font-size:14px;text-transform:uppercase;letter-spacing:0.04em;text-decoration:none;cursor:pointer;white-space:nowrap" style-hover="background:var(--color-accent-600);border-color:var(--color-accent-600);color:var(--color-bg)">{{ ctaNav }}</a>
+  </nav>
+
+  <div style="max-width:1180px;margin:0 auto;padding:0 clamp(20px,5vw,72px)">
+
+    <section style="padding:clamp(48px,7vw,96px) 0 clamp(40px,5vw,72px)">
+      <sc-if value="{{ tonoSobrio }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid var(--color-accent);color:var(--color-accent-700);font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:28px">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="5" width="18" height="16"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg>
+            Próximo inicio: 7 de septiembre · Solo 20 cupos disponibles
+          </span>
+          <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(38px,6.6vw,88px);line-height:1.04;letter-spacing:0.01em;text-transform:uppercase;margin:0">
+            <span style="display:block">Aprende gasfitería domiciliaria</span>
+            <span style="display:block;color:var(--color-accent-700)">y genera un ingreso extra</span>
+          </h1>
+          <p style="font-size:17px;line-height:1.55;max-width:58ch;margin:32px 0 0;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Curso 100% presencial, sin necesidad de experiencia ni certificación previa. Aprende un oficio con alta demanda en solo 8 módulos prácticos.</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ tonoDirecto }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <span style="display:inline-flex;align-items:center;gap:10px;padding:7px 14px;border:1px solid var(--color-accent);background:var(--color-accent-200);color:var(--color-accent-800);font-family:var(--font-heading);font-weight:600;font-size:13px;letter-spacing:0.08em;text-transform:uppercase;margin-bottom:28px">
+            <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"><rect x="3" y="5" width="18" height="16"></rect><path d="M8 3v4M16 3v4M3 10h18"></path></svg>
+            Empieza el 7 de septiembre · quedan 20 cupos
+          </span>
+          <h1 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(38px,6.6vw,88px);line-height:1.04;letter-spacing:0.01em;text-transform:uppercase;margin:0">
+            <span style="display:block">Aprende el oficio en 4 semanas</span>
+            <span style="display:block;color:var(--color-accent-700)">y empieza a cobrar por tu trabajo</span>
+          </h1>
+          <p style="font-size:17px;line-height:1.55;max-width:58ch;margin:32px 0 0;color:color-mix(in srgb, var(--color-text) 82%, transparent)">8 clases presenciales en Concón, con materiales y herramientas incluidos. Sin experiencia previa: entras sin saber nada y sales instalando, reparando y cobrando.</p>
+        </div>
+      </sc-if>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:32px">
+        <a href="{{ ctaHref }}" onClick="{{ ctaClick }}" role="button" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 30px;border:1px solid var(--color-accent);background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;cursor:pointer" style-hover="background:var(--color-accent-600);border-color:var(--color-accent-600);color:var(--color-bg)">{{ ctaHero }}</a>
+        <a href="#modulos" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 24px;border:1px solid var(--color-divider);color:var(--color-text);font-family:var(--font-heading);font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none" style-hover="background:color-mix(in srgb, var(--color-text) 7%, transparent);color:var(--color-text)">Ver los 8 módulos</a>
+      </div>
+    </section>
+
+    
+
+    <section style="padding:clamp(32px,4vw,56px) 0">
+      <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin:0 0 12px">01 · Por qué aprender este oficio</span>
+      <hr style="height:1px;border:0;margin:0 0 40px;background:var(--color-divider)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:clamp(28px,3vw,44px)">
+        <div class="blueprint" style="padding:24px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;font-weight:600;color:var(--color-accent-700);margin-bottom:14px">01</span>
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:22px;line-height:1.15;letter-spacing:0.02em;text-transform:uppercase;margin:0">Alta demanda constante</h2>
+          <p style="font-size:15px;line-height:1.6;margin:14px 0 0;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Todas las casas necesitan mantención de agua y gas alguna vez.</p>
+        </div>
+        <div class="blueprint" style="padding:24px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;font-weight:600;color:var(--color-accent-700);margin-bottom:14px">02</span>
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:22px;line-height:1.15;letter-spacing:0.02em;text-transform:uppercase;margin:0">Aprendes rápido</h2>
+          <p style="font-size:15px;line-height:1.6;margin:14px 0 0;color:color-mix(in srgb, var(--color-text) 78%, transparent)">En 8 módulos prácticos tienes las bases para empezar a trabajar.</p>
+        </div><div class="blueprint" style="padding:24px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;font-weight:600;color:var(--color-accent-700);margin-bottom:14px">04</span>
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:22px;line-height:1.15;letter-spacing:0.02em;text-transform:uppercase;margin:0">Ingreso adicional real</h2>
+          <p style="font-size:15px;line-height:1.6;margin:14px 0 0;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Ideal como complemento a tu trabajo actual o nueva fuente de ingresos.</p>
+        </div><div class="blueprint" style="padding:24px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;font-weight:600;color:var(--color-accent-700);margin-bottom:14px">03</span>
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:22px;line-height:1.15;letter-spacing:0.02em;text-transform:uppercase;margin:0">Trabaja de forma independiente</h2>
+          <p style="font-size:15px;line-height:1.6;margin:14px 0 0;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Ofrece tus servicios por tu cuenta y arma tu propia agenda.</p>
+        </div>
+        
+        
+      </div>
+    </section><section id="modulos" style="padding:clamp(40px,5vw,72px) 0 clamp(32px,4vw,56px)">
+      <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin:0 0 12px">02 · Qué aprenderás</span>
+      <hr style="height:1px;border:0;margin:0 0 40px;background:var(--color-divider)">
+      <div class="blueprint">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <header style="display:flex;flex-wrap:wrap;align-items:stretch;border-bottom:1px solid var(--color-divider)">
+          <span style="flex:1;min-width:16ch;padding:12px 24px;font-family:var(--font-heading);font-size:13px;line-height:24px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600">Programa del curso — 8 módulos prácticos</span>
+          <span style="padding:12px 24px;border-left:1px solid var(--color-divider);font-family:var(--font-heading);font-size:13px;line-height:24px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 70%, transparent)">4 semanas</span>
+          <span style="padding:12px 24px;border-left:1px solid var(--color-divider);font-family:var(--font-heading);font-size:13px;line-height:24px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 70%, transparent)">2 h por clase</span>
+        </header>
+        <ol style="list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr))">
+          <sc-for list="{{ modulos }}" as="m" hint-placeholder-count="8">
+            <li style="display:flex;align-items:baseline;gap:16px;padding:16px 24px;border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+              <span style="font-family:var(--font-heading);font-size:13px;font-weight:600;letter-spacing:0.08em;color:var(--color-accent-700);min-width:2ch">{{ m.n }}</span>
+              <span>
+                <span style="display:block;font-family:var(--font-heading);font-weight:600;font-size:20px;line-height:1.2;letter-spacing:0.02em">{{ m.t }}</span>
+                <sc-if value="{{ m.d }}" hint-placeholder-val="{{ false }}">
+                  <span style="display:block;font-size:14px;line-height:1.5;margin-top:6px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">{{ m.d }}</span>
+                </sc-if>
+              </span>
+            </li>
+          </sc-for>
+        </ol>
+      </div>
+      <div style="display:flex;justify-content:flex-start;margin-top:32px">
+        <a href="{{ ctaHref }}" onClick="{{ ctaClick }}" role="button" style="display:inline-flex;align-items:center;justify-content:center;padding:14px 28px;border:1px solid var(--color-accent);background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;cursor:pointer" style-hover="background:var(--color-accent-600);border-color:var(--color-accent-600);color:var(--color-bg)">{{ ctaModulos }}</a>
+      </div>
+    </section>
+
+    <section style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,5vw,80px);align-items:center;padding:clamp(40px,5vw,72px) 0">
+      <div>
+        <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin:0 0 12px">03 · Quién enseña</span>
+        <hr style="height:1px;border:0;margin:0 0 24px;background:var(--color-divider)">
+        <h2 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(28px,3.4vw,38px);line-height:1.1;letter-spacing:0.02em;text-transform:uppercase;margin:0">Nicolás Canales<br>Fundador de NC Gasfitería</h2>
+        <p style="font-size:16px;line-height:1.6;margin:24px 0 0;max-width:48ch;color:color-mix(in srgb, var(--color-text) 82%, transparent)">Con 6 años de experiencia en el rubro, Nicolás se ha destacado en instalación de gas Clase 3, gasfitería domiciliaria y riego automático. Ahora comparte ese conocimiento de forma práctica y directa, para que cualquier persona —sin experiencia previa— pueda aprender el oficio.</p>
+      </div>
+      <figure class="blueprint duotone" style="margin:0">
+        <image-slot id="nc-instructor" shape="rect" src="fotos/instructor-clase.png" placeholder="Foto del instructor en clase" style="width:100%;aspect-ratio:3/4"></image-slot>
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+      </figure>
+    </section>
+
+    <section style="padding:0 0 clamp(40px,5vw,72px)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:clamp(24px,3vw,40px)">
+        <figure class="blueprint duotone" style="margin:0">
+          <image-slot id="nc-taller-1" shape="rect" src="fotos/clase-taller.png" placeholder="Taller / sede" style="width:100%;aspect-ratio:1/1"></image-slot>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </figure>
+        <figure class="blueprint duotone" style="margin:0">
+          <image-slot id="nc-taller-2" shape="rect" src="fotos/calefont-demo.png" placeholder="Demostración en calefont" style="width:100%;aspect-ratio:1/1"></image-slot>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </figure>
+        <figure class="blueprint duotone" style="margin:0">
+          <image-slot id="nc-taller-3" shape="rect" src="fotos/instalacion-panel.png" placeholder="Panel de instalación" style="width:100%;aspect-ratio:1/1"></image-slot>
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        </figure>
+      </div>
+    </section>
+
+    <section id="detalles" style="padding:clamp(32px,4vw,56px) 0">
+      <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin:0 0 12px">04 · Detalles prácticos</span>
+      <hr style="height:1px;border:0;margin:0 0 40px;background:var(--color-divider)">
+      <div class="blueprint">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <header style="display:flex;flex-wrap:wrap;align-items:stretch;border-bottom:1px solid var(--color-divider)">
+          <span style="flex:1;min-width:16ch;padding:12px 24px;font-family:var(--font-heading);font-size:13px;line-height:24px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600">Ficha del curso</span>
+          <span style="padding:12px 24px;border-left:1px solid var(--color-divider);font-family:var(--font-heading);font-size:13px;line-height:24px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Inicio 07·09</span>
+        </header>
+        <sc-for list="{{ detalles }}" as="d" hint-placeholder-count="6">
+          <div style="display:flex;flex-wrap:wrap;gap:4px 24px;padding:16px 24px;border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+            <span style="flex:0 0 auto;min-width:150px;font-family:var(--font-heading);font-size:13px;line-height:24px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:color-mix(in srgb, var(--color-text) 70%, transparent)">{{ d.k }}</span>
+            <span style="flex:1 1 260px;font-size:16px;line-height:24px">{{ d.v }}</span>
+          </div>
+        </sc-for>
+        <div style="display:flex;flex-wrap:wrap;gap:12px 32px;padding:20px 24px">
+          <sc-for list="{{ incluye }}" as="i" hint-placeholder-count="3">
+            <span style="display:flex;align-items:center;gap:10px;font-size:15px">
+              <span style="display:grid;place-items:center;flex:none;width:22px;height:22px;background:var(--color-accent-200);color:var(--color-accent-800)">
+                <svg viewBox="0 0 16 16" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 8.4l3 3 7-7.4"></path></svg>
+              </span>
+              {{ i }}
+            </span>
+          </sc-for>
+        </div>
+      </div>
+    </section>
+
+    <section id="inversion" style="padding:clamp(32px,4vw,56px) 0">
+      <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin:0 0 12px">05 · Inversión y formas de pago</span>
+      <hr style="height:1px;border:0;margin:0 0 40px;background:var(--color-divider)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(28px,3vw,44px)">
+        <div class="blueprint" style="padding:28px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Pago único</span>
+          <span style="display:block;font-family:var(--font-heading);font-weight:600;font-size:clamp(40px,5vw,56px);line-height:1.05;letter-spacing:0.01em;margin:16px 0 0">{{ precioUnico }}</span>
+          <p style="font-size:15px;line-height:1.6;margin:12px 0 0;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Tarjeta o transferencia.</p>
+        </div>
+        <div class="blueprint" style="padding:28px">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700)">Pago en cuotas</span>
+          <span style="display:block;font-family:var(--font-heading);font-weight:600;font-size:clamp(40px,5vw,56px);line-height:1.05;letter-spacing:0.01em;margin:16px 0 0">{{ precioCuotas }}</span>
+          <p style="font-size:15px;line-height:1.6;margin:12px 0 0;color:color-mix(in srgb, var(--color-text) 78%, transparent)">Hasta 3 cuotas · total {{ precioCuotas }}.</p>
+        </div>
+      </div>
+      <div style="display:flex;margin-top:32px">
+        <a href="{{ ctaHref }}" onClick="{{ ctaClick }}" role="button" style="display:inline-flex;align-items:center;justify-content:center;padding:15px 30px;border:1px solid var(--color-accent);background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;cursor:pointer" style-hover="background:var(--color-accent-600);border-color:var(--color-accent-600);color:var(--color-bg)">{{ ctaPago }}</a>
+      </div>
+    </section>
+
+    <section style="padding:clamp(32px,4vw,56px) 0">
+      <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin:0 0 12px">06 · Preguntas frecuentes</span>
+      <hr style="height:1px;border:0;margin:0 0 40px;background:var(--color-divider)">
+      <div class="blueprint">
+        <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+        <sc-for list="{{ faqs }}" as="f" hint-placeholder-count="5">
+          <div style="border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+            <button type="button" onClick="{{ f.toggle }}" style="display:flex;align-items:center;gap:16px;width:100%;padding:18px 24px;background:transparent;border:0;cursor:pointer;text-align:left;font-family:var(--font-heading);font-weight:600;font-size:20px;line-height:1.25;letter-spacing:0.02em;color:var(--color-text)" style-hover="background:color-mix(in srgb, var(--color-text) 4%, transparent)">
+              <span style="flex:1">{{ f.q }}</span>
+              <span style="flex:none;font-size:22px;color:var(--color-accent-700)">{{ f.sign }}</span>
+            </button>
+            <sc-if value="{{ f.open }}" hint-placeholder-val="{{ true }}">
+              <p style="margin:0;padding:0 24px 20px;font-size:16px;line-height:1.6;max-width:70ch;color:color-mix(in srgb, var(--color-text) 80%, transparent)">{{ f.a }}</p>
+            </sc-if>
+          </div>
+        </sc-for>
+      </div>
+    </section>
+    <section id="inscripcion" style="padding:clamp(32px,4vw,56px) 0 clamp(40px,5vw,72px)">
+      <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:var(--color-accent-700);margin:0 0 12px">07 · Inscripción y pago</span>
+      <hr style="height:1px;border:0;margin:0 0 40px;background:var(--color-divider)">
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:clamp(28px,3vw,44px);align-items:start">
+
+        <div class="blueprint" style="padding:28px" ref="{{ formRef }}">
+          <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:24px;line-height:1.15;letter-spacing:0.02em;text-transform:uppercase;margin:0 0 20px">Completa tus datos</h2>
+          <div style="display:flex;flex-direction:column;gap:14px">
+            <label style="display:block">
+              <span style="display:block;font-size:12px;margin-bottom:5px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Nombre completo</span>
+              <input class="input" type="text" name="nombre" placeholder="Nombre y apellido">
+            </label>
+            <label style="display:block">
+              <span style="display:block;font-size:12px;margin-bottom:5px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Teléfono / WhatsApp</span>
+              <input class="input" type="tel" name="telefono" placeholder="+56 9 ...">
+            </label>
+            <label style="display:block">
+              <span style="display:block;font-size:12px;margin-bottom:5px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Correo</span>
+              <input class="input" type="email" name="correo" placeholder="tu@correo.cl">
+            </label>
+            <div>
+              <span style="display:block;font-size:12px;margin-bottom:6px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Grupo</span>
+              <div class="seg">
+                <label class="seg-opt"><input type="radio" name="nc-grupo" data-val="Grupo A · lunes y miércoles" defaultChecked="{{ true }}">Grupo A · lun y mié</label>
+                <label class="seg-opt"><input type="radio" name="nc-grupo" data-val="Grupo B · martes y jueves">Grupo B · mar y jue</label>
+              </div>
+            </div>
+            <div>
+              <span style="display:block;font-size:12px;margin-bottom:6px;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Forma de pago</span>
+              <div style="display:flex;flex-direction:column;gap:8px">
+                <label class="radio"><input type="radio" name="nc-pago" data-val="Pago único" defaultChecked="{{ true }}"><span class="dot"></span>Pago único · {{ precioUnico }}</label>
+                <label class="radio"><input type="radio" name="nc-pago" data-val="3 cuotas"><span class="dot"></span>3 cuotas · total {{ precioCuotas }}</label>
+              </div>
+            </div>
+          </div>
+          <button type="button" onClick="{{ enviarWhatsapp }}" style="display:flex;align-items:center;justify-content:center;gap:10px;width:100%;margin-top:24px;padding:15px 24px;border:1px solid var(--color-accent);background:var(--color-accent);color:var(--color-bg);font-family:var(--font-heading);font-weight:600;font-size:16px;text-transform:uppercase;letter-spacing:0.05em;cursor:pointer" style-hover="background:var(--color-accent-600);border-color:var(--color-accent-600)">
+            <svg viewBox="0 0 24 24" width="17" height="17" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.5 8.5 0 0 1-12.6 7.4L3 20.5l1.7-5.2A8.5 8.5 0 1 1 21 11.5z"></path></svg>
+            Enviar por WhatsApp
+          </button>
+          <p style="margin:14px 0 0;font-size:13px;line-height:1.5;color:color-mix(in srgb, var(--color-text) 60%, transparent)">Al enviar se abre WhatsApp con tus datos ya escritos. Los cupos se asignan por orden de pago.</p>
+        </div>
+
+        <div style="display:flex;flex-direction:column;gap:clamp(24px,3vw,36px)">
+          <div class="blueprint">
+            <i class="corner tl"></i><i class="corner tr"></i><i class="corner bl"></i><i class="corner br"></i>
+            <header style="display:flex;flex-wrap:wrap;align-items:stretch;border-bottom:1px solid var(--color-divider)">
+              <span style="flex:1;min-width:14ch;padding:12px 24px;font-family:var(--font-heading);font-size:13px;line-height:24px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600">Datos de transferencia</span>
+              <span style="padding:12px 24px;border-left:1px solid var(--color-divider);font-family:var(--font-heading);font-size:13px;line-height:24px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;white-space:nowrap;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Mercado Pago</span>
+            </header>
+            <sc-for list="{{ transferencia }}" as="t" hint-placeholder-count="5">
+              <div style="display:flex;flex-wrap:wrap;gap:4px 24px;padding:14px 24px;border-bottom:1px solid color-mix(in srgb, var(--color-text) 8%, transparent)">
+                <span style="flex:0 0 auto;min-width:120px;font-family:var(--font-heading);font-size:13px;line-height:24px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:color-mix(in srgb, var(--color-text) 70%, transparent)">{{ t.k }}</span>
+                <span style="flex:1 1 200px;font-size:16px;line-height:24px;word-break:break-word">{{ t.v }}</span>
+              </div>
+            </sc-for>
+          </div>
+
+          <ol style="list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:16px">
+            <li style="display:flex;gap:16px">
+              <span style="flex:none;display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--color-accent);font-family:var(--font-heading);font-weight:600;font-size:15px;color:var(--color-accent-700)">1</span>
+              <span style="font-size:16px;line-height:1.5;padding-top:5px">Envía tus datos por WhatsApp con el formulario.</span>
+            </li>
+            <li style="display:flex;gap:16px">
+              <span style="flex:none;display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--color-accent);font-family:var(--font-heading);font-weight:600;font-size:15px;color:var(--color-accent-700)">2</span>
+              <span style="font-size:16px;line-height:1.5;padding-top:5px">Transfiere {{ precioUnico }} (pago único) o solicita el link de pago en cuotas por WhatsApp.</span>
+            </li>
+            <li style="display:flex;gap:16px">
+              <span style="flex:none;display:grid;place-items:center;width:34px;height:34px;border:1px solid var(--color-accent);font-family:var(--font-heading);font-weight:600;font-size:15px;color:var(--color-accent-700)">3</span>
+              <span style="font-size:16px;line-height:1.5;padding-top:5px">Manda el comprobante por WhatsApp y recibes la confirmación de tu cupo.</span>
+            </li>
+          </ol>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <section style="background:var(--color-accent-900);color:var(--color-bg);margin-top:clamp(40px,5vw,72px)">
+    <div style="max-width:1180px;margin:0 auto;padding:clamp(56px,7vw,96px) clamp(20px,5vw,72px)">
+      <sc-if value="{{ tonoSobrio }}" hint-placeholder-val="{{ true }}">
+        <div>
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(32px,4.8vw,62px);line-height:1.05;letter-spacing:0.01em;text-transform:uppercase;margin:0;max-width:24ch">Los cupos son limitados — asegura tu lugar hoy</h2>
+          <p style="font-size:17px;line-height:1.55;margin:24px 0 0;color:color-mix(in srgb, #ffffff 78%, transparent)">Próximo inicio: 7 de septiembre · 20 cupos disponibles</p>
+        </div>
+      </sc-if>
+      <sc-if value="{{ tonoDirecto }}" hint-placeholder-val="{{ false }}">
+        <div>
+          <h2 style="font-family:var(--font-heading);font-weight:600;font-size:clamp(32px,4.8vw,62px);line-height:1.05;letter-spacing:0.01em;text-transform:uppercase;margin:0;max-width:24ch">Son 20 cupos y parten el 7 de septiembre</h2>
+          <p style="font-size:17px;line-height:1.55;margin:24px 0 0;color:color-mix(in srgb, #ffffff 78%, transparent)">Cuando se llenan, el próximo curso queda para el mes siguiente.</p>
+        </div>
+      </sc-if>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:36px">
+        <a href="{{ ctaHref }}" onClick="{{ ctaClick }}" role="button" style="display:inline-flex;align-items:center;justify-content:center;padding:16px 32px;border:1px solid var(--color-bg);background:var(--color-bg);color:var(--color-accent-900);font-family:var(--font-heading);font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none;cursor:pointer" style-hover="background:var(--color-accent-200);border-color:var(--color-accent-200);color:var(--color-accent-900)">Reservar mi cupo</a>
+        <a href="{{ whatsappHref }}" target="_blank" rel="noreferrer" style="display:inline-flex;align-items:center;justify-content:center;gap:10px;padding:16px 28px;border:1px solid color-mix(in srgb, #ffffff 45%, transparent);color:var(--color-bg);font-family:var(--font-heading);font-weight:600;font-size:17px;text-transform:uppercase;letter-spacing:0.05em;text-decoration:none" style-hover="background:color-mix(in srgb, #ffffff 12%, transparent);color:var(--color-bg)">Consultar por WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <footer style="max-width:1180px;margin:0 auto;padding:clamp(40px,5vw,64px) clamp(20px,5vw,72px)">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:32px">
+      <div>
+        <span style="display:flex;align-items:center;gap:10px">
+          <span style="display:grid;place-items:center;width:34px;height:34px;border-radius:50%;background:var(--color-text);color:var(--color-bg);font-family:var(--font-heading);font-weight:600;font-size:15px">NC</span>
+          <span style="font-family:var(--font-heading);font-weight:600;font-size:19px;text-transform:uppercase;letter-spacing:0.02em">NC Gasfitería</span>
+        </span>
+        <p style="font-size:14px;line-height:1.6;margin:16px 0 0;color:color-mix(in srgb, var(--color-text) 70%, transparent)">Primera Transversal 817, Sede San Andrés, Concón, Región de Valparaíso</p>
+      </div>
+      <div>
+        <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:color-mix(in srgb, var(--color-text) 70%, transparent);margin-bottom:14px">Contacto</span>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+          <a href="{{ whatsappHref }}" target="_blank" rel="noreferrer" style="text-decoration:none">WhatsApp +56 9 6575 3284</a>
+          <a href="mailto:riegoautomaticoygasfiteria@gmail.com" style="text-decoration:none;word-break:break-all">riegoautomaticoygasfiteria@gmail.com</a>
+          <a href="https://instagram.com/gasfiteria.nc" target="_blank" rel="noreferrer" style="text-decoration:none">@gasfiteria.nc</a>
+        </div>
+      </div>
+      <div>
+        <span style="display:block;font-family:var(--font-heading);font-size:13px;letter-spacing:0.08em;text-transform:uppercase;font-weight:600;color:color-mix(in srgb, var(--color-text) 70%, transparent);margin-bottom:14px">Curso</span>
+        <div style="display:flex;flex-direction:column;gap:8px;font-size:15px">
+          <a href="#modulos" style="text-decoration:none">Los 8 módulos</a>
+          <a href="#detalles" style="text-decoration:none">Detalles prácticos</a>
+          <a href="#inversion" style="text-decoration:none">Inversión</a>
+        </div>
+      </div>
+    </div>
+    <hr style="height:1px;border:0;margin:40px 0 20px;background:var(--color-divider)">
+    <p style="margin:0;font-size:13px;color:color-mix(in srgb, var(--color-text) 60%, transparent)">© 2026 NC Gasfitería. Todos los derechos reservados.</p>
+  </footer>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{
+  &quot;tonoCopy&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;Sobria y técnica&quot;, &quot;options&quot;: [&quot;Sobria y técnica&quot;, &quot;Directa y vendedora&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Versiones&quot; },
+  &quot;colorAcento&quot;: { &quot;editor&quot;: &quot;color&quot;, &quot;default&quot;: &quot;#1B4FD1&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;options&quot;: [&quot;#1B4FD1&quot;, &quot;#5980A6&quot;, &quot;#0F766E&quot;, &quot;#B4451B&quot;], &quot;section&quot;: &quot;Marca&quot; },
+  &quot;ctaDestino&quot;: { &quot;editor&quot;: &quot;enum&quot;, &quot;default&quot;: &quot;Sección de inscripción&quot;, &quot;options&quot;: [&quot;Sección de inscripción&quot;, &quot;WhatsApp directo&quot;], &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Conversión&quot; },
+  &quot;faqAbiertaAlInicio&quot;: { &quot;editor&quot;: &quot;boolean&quot;, &quot;default&quot;: true, &quot;tsType&quot;: &quot;boolean&quot;, &quot;section&quot;: &quot;Conversión&quot; },
+  &quot;precioUnico&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;$150.000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Precios&quot; },
+  &quot;precioCuotas&quot;: { &quot;editor&quot;: &quot;text&quot;, &quot;default&quot;: &quot;$175.000&quot;, &quot;tsType&quot;: &quot;string&quot;, &quot;section&quot;: &quot;Precios&quot; }
+}">
+class Component extends DCLogic {
+  state = { openFaq: 0 };
+  formRef = React.createRef();
+
+  enviarWhatsapp = () => {
+    const f = this.formRef.current;
+    const val = (n) => {
+      const el = f && f.querySelector('[name="' + n + '"]');
+      return el ? el.value.trim() : '';
+    };
+    const marcado = (n) => {
+      const el = f && f.querySelector('input[name="' + n + '"]:checked');
+      return el ? el.getAttribute('data-val') : '';
+    };
+    const msg = [
+      'Hola, quiero inscribirme en el curso de Gasfitería Domiciliaria.',
+      '',
+      'Nombre: ' + (val('nombre') || '—'),
+      'Teléfono: ' + (val('telefono') || '—'),
+      'Correo: ' + (val('correo') || '—'),
+      'Grupo: ' + marcado('nc-grupo'),
+      'Forma de pago: ' + marcado('nc-pago')
+    ].join('\n');
+    window.open('https://wa.me/56965753284?text=' + encodeURIComponent(msg), '_blank', 'noopener');
+  };
+
+  componentDidMount() { this.applyAccent(); }
+  componentDidUpdate() { this.applyAccent(); }
+
+  applyAccent() {
+    const a = this.props.colorAcento;
+    if (!a) return;
+    const r = document.documentElement.style;
+    r.setProperty('--color-accent', a);
+    r.setProperty('--color-accent-200', `color-mix(in srgb, ${a} 16%, white)`);
+    r.setProperty('--color-accent-600', `color-mix(in srgb, ${a} 88%, black)`);
+    r.setProperty('--color-accent-700', `color-mix(in srgb, ${a} 76%, black)`);
+    r.setProperty('--color-accent-800', `color-mix(in srgb, ${a} 55%, black)`);
+    r.setProperty('--color-accent-900', `color-mix(in srgb, ${a} 36%, black)`);
+  }
+
+  renderVals() {
+    const wa = 'https://wa.me/56965753284?text=' + encodeURIComponent('Hola, quiero información sobre el curso de gasfitería domiciliaria.');
+    const porWhatsapp = (this.props.ctaDestino ?? 'Sección de inscripción') === 'WhatsApp directo';
+    const openIdx = this.props.faqAbiertaAlInicio === false && this.state.openFaq === 0 ? -1 : this.state.openFaq;
+    const directo = (this.props.tonoCopy ?? 'Sobria y técnica') === 'Directa y vendedora';
+
+    return {
+      tonoSobrio: !directo,
+      tonoDirecto: directo,
+      ctaNav: directo ? 'Reservar cupo' : 'Reserva tu cupo',
+      ctaHero: directo ? 'Quiero mi cupo' : 'Reserva tu cupo ahora',
+      ctaModulos: directo ? 'Tomar uno de los 20 cupos' : 'Quiero inscribirme',
+      ctaPago: directo ? 'Pagar y reservar' : 'Inscríbete y paga ahora',
+      formRef: this.formRef,
+      enviarWhatsapp: this.enviarWhatsapp,
+      transferencia: [
+        { k: 'Titular', v: 'Nicolás Ignacio Canales Parraguez' },
+        { k: 'RUT', v: '189564856' },
+        { k: 'Banco', v: 'Mercado Pago' },
+        { k: 'Tipo de cuenta', v: 'Cuenta Vista' },
+        { k: 'N° de cuenta', v: '1006492752' },
+        { k: 'Correo', v: 'ncanales109@gmail.com' }
+      ],
+      modulos: [
+        { n: '01', t: 'PVC: material y aplicación' },
+        { n: '02', t: 'PPR: material y aplicación' },
+        { n: '03', t: 'Cobre: material y aplicación' },
+        { n: '04', t: 'Redes de agua domiciliaria' },
+        { n: '05', t: 'WC: diagnóstico, reparación e instalación' },
+        { n: '06', t: 'Grifería y sifones' },
+        { n: '07', t: 'Limpieza de sarro en cañerías' },
+        { n: '08', t: 'Del oficio al emprendimiento', d: 'Cómo convertir tus conocimientos en una fuente de ingresos' }
+      ],
+      detalles: [
+        { k: 'Modalidad', v: '100% presencial' },
+        { k: 'Duración', v: '4 semanas · 8 clases de 2 horas' },
+        { k: 'Horario', v: 'Grupo A: lunes y miércoles · Grupo B: martes y jueves · 18:30 hrs' },
+        { k: 'Ubicación', v: 'Primera Transversal 817, Sede San Andrés, Concón, Región de Valparaíso' },
+        { k: 'Cupos', v: '20 cupos por curso' }
+      ],
+      incluye: ['Todos los materiales y herramientas necesarias', 'Diploma de participación'],
+      precioUnico: this.props.precioUnico ?? '$150.000',
+      precioCuotas: this.props.precioCuotas ?? '$175.000',
+      faqs: [
+        ['¿Necesito experiencia previa?', 'No, el curso está diseñado para personas sin conocimientos previos.'],
+        ['¿Entregan certificado?', 'No hay certificación oficial, pero sí diploma de participación.'],
+        ['¿Qué pasa si falto a una clase?', 'Debe recuperarse dentro de la misma semana.'],
+        ['¿Qué debo llevar?', 'Cuaderno, lápiz y ropa de trabajo cómoda.'],
+        ['¿Cómo reservo mi cupo?', 'Completando la inscripción y pago desde el sitio, por orden de pago.']
+      ].map(([q, a], i) => ({
+        q, a,
+        open: openIdx === i,
+        sign: openIdx === i ? '–' : '+',
+        toggle: () => this.setState(s => ({ openFaq: s.openFaq === i ? -1 : i }))
+      })),
+      whatsappHref: wa,
+      ctaHref: porWhatsapp ? wa : '#inscripcion',
+      ctaClick: undefined
+    };
+  }
+}
+
+</script>
+</body>
+</html>
